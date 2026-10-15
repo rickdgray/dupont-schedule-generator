@@ -5,7 +5,7 @@ using System.Drawing;
 
 ExcelPackage.License.SetNonCommercialPersonal("Rick Gray");
 
-var dupontSchedule = new DupontRingList(10);
+var dupontSchedule = new DupontRingList(25);
 
 var nextYear = DateTime.Now.Year + 1;
 
@@ -135,7 +135,7 @@ for (int col = 1; col <= 36; col++)
     worksheet.Column(col).SetTrueColumnWidth(3.71);
 }
 
-var ht = worksheet.HeaderFooter.OddHeader.Centered.AddText("Tanya's Schedule 2026");
+var ht = worksheet.HeaderFooter.OddHeader.Centered.AddText($"Tanya's Schedule {nextYear}");
 ht.FontName = "Aptos Display";
 ht.FontSize = 24;
 ht.Bold = true;
